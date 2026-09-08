@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+            >
+
+        <meta
+            name="description"
+            content="Scan QR Code, Micro QR, Data Matrix, Aztec, PDF417 and MaxiCode symbols from an image or your device camera."
+            >
+
+        <title>2D Code Scanner | jenga-code</title>
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="../../images/favicon.png"
+            >
+
+        <link
+            rel="stylesheet"
+            href="css/style.css"
+            >
+    </head>
+
+    <body>
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <header class="site-header">
+
+            <div class="header-inner">
+
+                <a
+                    class="site-logo"
+                    href="../../"
+                    aria-label="jenga-code home"
+                    >
+                    <img
+                        class="logo-image"
+                        src="../../images/logo.png"
+                        alt="jenga-code"
+                        >
+                </a>
+
+
+                <nav
+                    class="main-nav"
+                    aria-label="Main navigation"
+                    >
+                    <a href="../../">Home</a>
+                    <a href="../../blog/">Blog</a>
+                    <a class="active" href="../../#projects">Projects</a>
+                    <a href="../../#subjects">Subjects</a>
+                    <a href="../../#about">About</a>
+                    <a href="../../#contact">Contact</a>
+                </nav>
+
+
+                <div class="header-actions">
+
+                    <a
+                        class="social-link"
+                        href="https://github.com/GeorgeMillerGraduate"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                        >
+                        GH
+                    </a>
+
+                    <a
+                        class="social-link"
+                        href="#"
+                        aria-label="LinkedIn"
+                        >
+                        in
+                    </a>
+
+                    <a
+                        class="social-link"
+                        href="../../blog/feed/"
+                        aria-label="RSS feed"
+                        >
+                        RSS
+                    </a>
+
+                    <a
+                        class="subscribe-button"
+                        href="../../#newsletter"
+                        >
+                        Subscribe
+                    </a>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             MAIN
+             ===================================================== -->
+
+        <main class="page-shell">
+
+
+            <!-- =================================================
+                 COMPACT HERO
+                 ================================================= -->
+
+            <section class="scanner-hero">
+
+                <div class="hero-copy">
+
+                    <p class="eyebrow">
+                        INTERACTIVE DECODING PROJECT
+                    </p>
+
+                    <h1>
+                        2D Code Scanner.
+                        <span>Turn patterns into data.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Upload an image or use your camera to decode
+                        QR Codes and other two-dimensional symbols
+                        directly in your browser.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        class="primary-button"
+                        href="#scanner"
+                        >
+                        Scan a code
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a
+                        class="secondary-button"
+                        href="../2d-code-maker/"
+                        >
+                        Make a code
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SCANNER
+                 ================================================= -->
+
+            <section
+                class="application-section"
+                id="scanner"
+                >
+
+                <!-- Application title -->
+
+                <div class="application-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            INTERACTIVE WORKSPACE
+                        </p>
+
+                        <h2>
+                            Scan your code.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Choose an image or camera source. The decoded
+                        result appears alongside the preview so you
+                        do not need to scroll through the page.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     MAIN THREE-COLUMN WORKSPACE
+                     ================================================= -->
+
+                <div class="scanner-workspace">
+
+
+                    <!-- =============================================
+                         COLUMN 1 — SOURCE
+                         ============================================= -->
+
+                    <section class="workspace-card source-card">
+
+                        <div class="card-heading">
+
+                            <span class="step-number">
+                                01
+                            </span>
+
+                            <div>
+                                <h2>Source</h2>
+
+                                <p>
+                                    Choose what to scan.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Upload -->
+
+                        <div class="source-block">
+
+                            <div class="source-title">
+
+                                <span class="source-letter">
+                                    A
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Upload image
+                                    </strong>
+
+                                    <small>
+                                        PNG, JPG, JPEG or WebP
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <label
+                                class="upload-zone"
+                                id="uploadZone"
+                                for="imageInput"
+                                >
+
+                                <input
+                                    id="imageInput"
+                                    type="file"
+                                    accept="image/png,image/jpeg,image/webp"
+                                    hidden
+                                    >
+
+                                <span
+                                    class="upload-icon"
+                                    aria-hidden="true"
+                                    >
+                                    ↑
+                                </span>
+
+                                <div class="upload-copy">
+
+                                    <strong>
+                                        Choose an image
+                                    </strong>
+
+                                    <small>
+                                        Select a file containing
+                                        a 2D code.
+                                    </small>
+
+                                </div>
+
+                                <span class="upload-button">
+                                    Browse
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- Divider -->
+
+                        <div class="source-divider">
+                            <span>OR</span>
+                        </div>
+
+
+                        <!-- Camera -->
+
+                        <div class="source-block">
+
+                            <div class="source-title">
+
+                                <span class="source-letter">
+                                    B
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Use camera
+                                    </strong>
+
+                                    <small>
+                                        Best on phones and tablets
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                id="startCameraButton"
+                                class="camera-button"
+                                type="button"
+                                >
+                                <span
+                                    class="camera-icon"
+                                    aria-hidden="true"
+                                    >
+                                    ◉
+                                </span>
+
+                                <span>
+                                    Open Camera
+                                </span>
+
+                                <strong aria-hidden="true">
+                                    →
+                                </strong>
+                            </button>
+
+                        </div>
+
+
+                        <!-- Format -->
+
+                        <div class="format-block">
+
+                            <label for="scanFormat">
+                                Code format
+                            </label>
+
+                            <select id="scanFormat">
+
+                                <option
+                                    value="auto"
+                                    selected
+                                    >
+                                    Detect automatically
+                                </option>
+
+                                <option value="qr">
+                                    QR Code
+                                </option>
+
+                                <option value="microqr">
+                                    Micro QR
+                                </option>
+
+                                <option value="datamatrix">
+                                    Data Matrix
+                                </option>
+
+                                <option value="aztec">
+                                    Aztec Code
+                                </option>
+
+                                <option value="pdf417">
+                                    PDF417
+                                </option>
+
+                                <option value="maxicode">
+                                    MaxiCode
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Privacy -->
+
+                        <div class="privacy-notice">
+
+                            <span
+                                class="notice-icon"
+                                aria-hidden="true"
+                                >
+                                i
+                            </span>
+
+                            <p>
+                                Images and camera frames are processed
+                                locally in your browser.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =============================================
+                         COLUMN 2 — PREVIEW
+                         ============================================= -->
+
+                    <section class="workspace-card preview-card">
+
+                        <div class="card-heading">
+
+                            <span class="step-number">
+                                02
+                            </span>
+
+                            <div>
+                                <h2>Preview</h2>
+
+                                <p
+                                    id="scannerStatus"
+                                    role="status"
+                                    aria-live="polite"
+                                    >
+                                    Upload an image or open the camera.
+                                </p>
+                            </div>
+
+                            <span
+                                id="scannerBadge"
+                                class="format-badge"
+                                >
+                                WAITING
+                            </span>
+
+                        </div>
+
+
+                        <!-- Scanner stage -->
+
+                        <div
+                            id="scannerStage"
+                            class="scanner-stage"
+                            >
+
+                            <!-- Empty state -->
+
+                            <div
+                                id="emptyState"
+                                class="empty-state"
+                                >
+
+                                <div
+                                    class="scanner-placeholder"
+                                    aria-hidden="true"
+                                    >
+
+                                    <span
+                                        class="placeholder-corner corner-tl"
+                                        ></span>
+
+                                    <span
+                                        class="placeholder-corner corner-tr"
+                                        ></span>
+
+                                    <span
+                                        class="placeholder-corner corner-bl"
+                                        ></span>
+
+                                    <span
+                                        class="placeholder-corner corner-br"
+                                        ></span>
+
+
+                                    <div class="placeholder-code">
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                        <i></i><i></i><i></i><i></i><i></i>
+                                    </div>
+
+                                </div>
+
+                                <h3>
+                                    Ready to scan
+                                </h3>
+
+                                <p>
+                                    Your selected image or camera
+                                    feed will appear here.
+                                </p>
+
+                            </div>
+
+
+                            <!-- Uploaded image -->
+
+                            <img
+                                id="uploadedImage"
+                                alt="Image selected for scanning"
+                                hidden
+                                >
+
+
+                            <!-- Camera -->
+
+                            <div
+                                id="cameraContainer"
+                                class="camera-container"
+                                hidden
+                                >
+
+                                <video
+                                    id="cameraVideo"
+                                    autoplay
+                                    muted
+                                    playsinline
+                                    ></video>
+
+
+                                <div
+                                    class="live-scan-frame"
+                                    aria-hidden="true"
+                                    >
+
+                                    <span
+                                        class="live-corner live-tl"
+                                        ></span>
+
+                                    <span
+                                        class="live-corner live-tr"
+                                        ></span>
+
+                                    <span
+                                        class="live-corner live-bl"
+                                        ></span>
+
+                                    <span
+                                        class="live-corner live-br"
+                                        ></span>
+
+                                    <div class="live-scan-line"></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Processing canvas -->
+
+                            <canvas
+                                id="scannerCanvas"
+                                hidden
+                                >
+                                Your browser does not support HTML canvas.
+                            </canvas>
+
+                        </div>
+
+
+                        <!-- Camera controls -->
+
+                        <div
+                            id="cameraControls"
+                            class="camera-controls"
+                            hidden
+                            >
+
+                            <span class="live-indicator">
+                                <i></i>
+                                CAMERA ACTIVE
+                            </span>
+
+                            <button
+                                id="switchCameraButton"
+                                type="button"
+                                >
+                                Switch
+                            </button>
+
+                            <button
+                                id="stopCameraButton"
+                                type="button"
+                                >
+                                Stop
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =============================================
+                         COLUMN 3 — RESULT
+                         ============================================= -->
+
+                    <section class="workspace-card result-card">
+
+                        <div class="card-heading">
+
+                            <span class="step-number">
+                                03
+                            </span>
+
+                            <div>
+                                <h2>Result</h2>
+
+                                <p>
+                                    Decoded information.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Scan metadata -->
+
+                        <div class="scan-details">
+
+                            <div>
+                                <span>FORMAT</span>
+
+                                <strong id="detailFormat">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>SOURCE</span>
+
+                                <strong id="detailSource">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>STATUS</span>
+
+                                <strong id="detailStatus">
+                                    Waiting
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Decoded output -->
+
+                        <section
+                            id="resultPanel"
+                            class="result-panel"
+                            >
+
+                            <div class="result-heading">
+
+                                <div>
+                                    <span class="result-label">
+                                        DECODED DATA
+                                    </span>
+
+                                    <h3>
+                                        Scan result
+                                    </h3>
+                                </div>
+
+                                <button
+                                    id="copyResultButton"
+                                    type="button"
+                                    disabled
+                                    >
+                                    Copy
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                id="resultOutput"
+                                class="result-output empty"
+                                >
+                                No code has been decoded yet.
+                            </div>
+
+
+                            <div
+                                id="resultActions"
+                                class="result-actions"
+                                hidden
+                                >
+
+                                <a
+                                    id="openResultLink"
+                                    class="primary-button"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    hidden
+                                    >
+                                    Open Link
+
+                                    <span aria-hidden="true">
+                                        →
+                                    </span>
+                                </a>
+
+                                <button
+                                    id="scanAgainButton"
+                                    class="secondary-button"
+                                    type="button"
+                                    >
+                                    Scan Another
+                                </button>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Result explanation -->
+
+                        <div class="result-tip">
+
+                            <span>✓</span>
+
+                            <p>
+                                Successful scans appear here
+                                immediately after decoding.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 INFORMATION
+                 ================================================= -->
+
+            <section class="information-section">
+
+                <div class="section-intro">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            HOW IT WORKS
+                        </p>
+
+                        <h2>
+                            From pixels to data.
+                        </h2>
+
+                    </div>
+
+                    <p class="section-copy">
+                        The scanner locates the symbol, samples its
+                        modules, applies error correction and reconstructs
+                        the encoded information.
+                    </p>
+
+                </div>
+
+
+                <div class="information-grid">
+
+                    <article>
+                        <span class="info-number">01</span>
+                        <h3>Capture</h3>
+
+                        <p>
+                            Load an image or capture frames
+                            from a live camera feed.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span class="info-number">02</span>
+                        <h3>Detect</h3>
+
+                        <p>
+                            Locate the structural patterns
+                            that identify the code.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span class="info-number">03</span>
+                        <h3>Correct</h3>
+
+                        <p>
+                            Recover uncertain data using
+                            the symbol's error correction.
+                        </p>
+                    </article>
+
+
+                    <article>
+                        <span class="info-number">04</span>
+                        <h3>Decode</h3>
+
+                        <p>
+                            Convert recovered codewords into
+                            the original text or URL.
+                        </p>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =====================================================
+             FOOTER
+             ===================================================== -->
+
+        <footer class="site-footer">
+
+            <div class="footer-inner">
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../../"
+                        aria-label="jenga-code home"
+                        >
+                        <img
+                            class="footer-logo"
+                            src="../../images/logo.png"
+                            alt="jenga-code"
+                            >
+                    </a>
+
+                    <p>
+                        2D Code Scanner — a jenga-code interactive project.
+                    </p>
+
+                </div>
+
+
+                <nav
+                    class="footer-links"
+                    aria-label="Footer navigation"
+                    >
+
+                    <a href="../../">
+                        Home
+                    </a>
+
+                    <a href="../../#projects">
+                        Projects
+                    </a>
+
+                    <a href="../../blog/">
+                        Blog
+                    </a>
+
+                    <a
+                        href="https://github.com/GeorgeMillerGraduate"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        GitHub
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </footer>
+
+
+        <!-- =====================================================
+             SCRIPTS
+             ===================================================== -->
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+        ></script>
+
+
+        <!-- =========================================================
+      COMMON / CORE
+      ========================================================= -->
+
+        <script src="js/common/BitMatrix.js"></script>
+        <script src="js/common/BitSource.js"></script>
+
+        <script src="js/common/GenericGFPoly.js"></script>
+        <script src="js/common/GenericGF.js"></script>
+
+        <script src="js/common/ReedSolomonDecoder.js"></script>
+
+
+        <!-- =========================================================
+             IMAGE PROCESSING
+             ========================================================= -->
+
+        <script src="js/image/Grayscale.js"></script>
+        <script src="js/image/Binarizer.js"></script>
+        <script src="js/image/ImageLoader.js"></script>
+
+
+        <!-- =========================================================
+             QR CODE READER
+             ========================================================= -->
+
+        <!-- Finder pattern detection -->
+        <script src="js/qr/FinderPatternFinder.js"></script>
+
+        <!-- QR metadata -->
+        <script src="js/qr/QRFormatInformation.js"></script>
+        <script src="js/qr/QRVersion.js"></script>
+
+        <!-- Detection / perspective sampling -->
+        <script src="js/qr/QRGridSampler.js"></script>
+        <script src="js/qr/QRDetector.js"></script>
+
+        <!-- Matrix parsing / codewords -->
+        <script src="js/qr/QRBitMatrixParser.js"></script>
+        <script src="js/qr/QRDataBlock.js"></script>
+
+        <!-- Error correction -->
+        <script src="js/qr/QRErrorCorrection.js"></script>
+
+        <!-- Payload decoding -->
+        <script src="js/qr/QRDecodedBitStreamParser.js"></script>
+
+        <!-- High-level QR reader -->
+        <script src="js/qr/QRCodeReader.js"></script>
+
+
+        <!-- =========================================================
+             DATA MATRIX READER
+             ========================================================= -->
+
+        <!-- Symbol dimensions / capacities -->
+        <script src="js/datamatrix/DataMatrixSymbolInfo.js"></script>
+
+        <!-- Detection -->
+        <script src="js/datamatrix/DataMatrixDetector.js"></script>
+
+        <!-- Read codewords from detected matrix -->
+        <script src="js/datamatrix/DataMatrixCodewordReader.js"></script>
+
+        <!-- Reed-Solomon correction -->
+        <script src="js/datamatrix/DataMatrixErrorCorrection.js"></script>
+
+        <!-- Decode corrected Data Matrix data -->
+        <script src="js/datamatrix/DataMatrixDecoder.js"></script>
+
+        <!-- High-level Data Matrix reader -->
+        <script src="js/datamatrix/DataMatrixReader.js"></script>
+
+
+        <!-- =========================================================
+             BARCODE COORDINATOR
+             
+             Must come AFTER QRCodeReader and DataMatrixReader.
+             ========================================================= -->
+
+        <script src="js/BarcodeReader.js"></script>
+
+
+        <!-- =========================================================
+             APPLICATION
+             
+             Must be last because it uses everything above.
+             ========================================================= -->
+
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
